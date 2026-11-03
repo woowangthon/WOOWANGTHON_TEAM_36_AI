@@ -23,7 +23,8 @@ class FakeModels:
 def make_extractor(outcomes, **settings):
     models = FakeModels(outcomes)
     client = SimpleNamespace(models=models)
-    s = Settings(retry_base_seconds=0, **settings)
+    # .env 값에 테스트가 흔들리지 않도록 모델 이름을 고정합니다
+    s = Settings(retry_base_seconds=0, gemini_model="test-model", **settings)
     return GeminiExtractor(s, client=client), models
 
 
@@ -43,7 +44,7 @@ def test_extract_parses_and_tags_version(example_request, example_expected):
     extractor, _ = make_extractor([example_expected.model_dump_json()])
     res = extractor.extract(example_request)
     assert res.criteria == example_expected
-    assert res.model_version == "gemini-2.5-flash/extract_v1/v1"
+    assert res.model_version == "test-model/extract_v1/v1"
     assert res.truncated is False
 
 
