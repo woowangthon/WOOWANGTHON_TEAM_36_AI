@@ -1,0 +1,34 @@
+{
+  "notice_kind": "모집",
+  "scholarships": [
+    {
+      "scholarship_name": "OO재단 장학금",
+      "benefit_amount_text": "1인당 200만원",
+      "benefit_type": "생활비성",
+      "apply_start": "2026-10-30",
+      "apply_end": "2026-11-12 18:00",
+      "target_grades": [2, 3],
+      "excludes_extra_semester": null,
+      "enrollment_status": ["재학"],
+      "min_gpa": 3.5,
+      "min_credits": 12,
+      "gender": null,
+      "max_age": null,
+      "max_income_bracket": null,
+      "regions": null,
+      "region_basis": null,
+      "required_special": null,
+      "excludes_full_tuition": null,
+      "target_department": "소프트웨어학부 포함",
+      "target_program": "제한없음",
+      "required_documents": ["장학금 신청서", "성적증명서"],
+      "extra_conditions": ["직전학기 봉사활동 20시간 이상인 자 우대"],
+      "ambiguous_fields": [],
+      "evidence": [
+        {"field": "min_gpa", "quote": "직전학기 평점평균 3.5 이상(4.5 만점)"},
+        {"field": "target_grades", "quote": "소프트웨어학부 2~3학년 재학생"},
+        {"field": "apply_end", "quote": "신청 기간: 2026. 10. 30.(목) ~ 11. 12.(수) 18:00"}
+      ]
+    }
+  ]
+}
